@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>codeforces</title>
-    <url>/2021/11/02/codeforces/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>-题解</category>
-      </categories>
-      <tags>
-        <tag>-分块</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>my first blog</title>
     <url>/2021/10/31/My-First-Blog/</url>
     <content><![CDATA[<p>2021.10.31<br>之前在csdn上写过blog，但实在太丑，所以想自己整一个blog。虽然还很简陋，但会慢慢改变的。</p>
@@ -35,5 +24,20 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>codeforces593D</title>
+    <url>/2021/11/02/codeforces593D/</url>
+    <content><![CDATA[<hr>
+<p>题意：给一颗有边权的树，有两种操作：</p>
+<p>1.选择一个数$y_i$和两个节点$a_i, b_i$。从$a_i走到 b_i$，每当他经过一条边$j$时，他选择的数$y_i$会立刻变成$\lfloor \frac{y_i}{x_j} \rfloor$，也就是$\frac{y_i}{x_i}$向下取整。</p>
+<p>2.选择第j<em>j</em>条边p_j<em>p**j</em>，把它的边权x_{p_i}<em>x<strong>p</strong>i</em>改成一个正整数c_i \in [1,x_{p_i}]<em>c**i</em>∈[1,<em>x<strong>p</strong>i</em>]。</p>
+]]></content>
+      <categories>
+        <category>-题解</category>
+      </categories>
+      <tags>
+        <tag>-取模必定除2</tag>
+      </tags>
   </entry>
 </search>
