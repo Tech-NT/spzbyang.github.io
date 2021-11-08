@@ -31,10 +31,10 @@
     <content><![CDATA[<hr>
 <p>题意：给一颗有边权的树，有两种操作：</p>
 <p>1.选择一个数$y_i$和两个节点$a_i, b_i$。从$a_i走到 b_i$，每当他经过一条边$j$时，他选择的数$y_i$会立刻变成$\lfloor \frac{y_i}{x_j} \rfloor$，也就是$\frac{y_i}{x_i}$向下取整。</p>
-<p>2.选择第j<em>j</em>条边p_j<em>p**j</em>，把它的边权x_{p_i}<em>x<strong>p</strong>i</em>改成一个正整数c_i \in [1,x_{p_i}]<em>c**i</em>∈[1,<em>x<strong>p</strong>i</em>]。</p>
+<p>2.选择第$j$条边$p_j$，把它的边权$x_{p_i}$改成一个正整数$c_i \in [1,x_{p_i}]$。</p>
 ]]></content>
       <categories>
-        <category>-题解</category>
+        <category>-[题解,CF]</category>
       </categories>
       <tags>
         <tag>-取模必定除2</tag>
