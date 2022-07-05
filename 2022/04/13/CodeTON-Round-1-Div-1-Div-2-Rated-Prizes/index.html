@@ -20,19 +20,23 @@
     var CONFIG = {"hostname":"spzbyang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="A.Good Pairs题意![image-20220413112459295](D:\My blog\source_posts\photo\image-20220413112459295.png) 题解要求数轴上$a_k$在$a_i, a_j$之间， 求最大最小数 B.题意![image-20220413113036997](D:\My blog\source_posts\photo\image">
+  <meta name="description" content="A.Good Pairs 题意   image-20220413112459295  题解 要求数轴上\(a_k\)在\(a_i, a_j\)之间， 求最大最小数 B. 题意   image-20220413113036997  题解 假设有三个数\(a_i,a_j,a_k\)，先删除\(a_i\)，再删除\(a_j\)的结果就是\(a_k-a_i-(a_j-a_i)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CodeTON Round 1 (Div. 1 + Div. 2, Rated, Prizes!)">
 <meta property="og:url" content="https://spzbyang.github.io/2022/04/13/CodeTON-Round-1-Div-1-Div-2-Rated-Prizes/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="A.Good Pairs题意![image-20220413112459295](D:\My blog\source_posts\photo\image-20220413112459295.png) 题解要求数轴上$a_k$在$a_i, a_j$之间， 求最大最小数 B.题意![image-20220413113036997](D:\My blog\source_posts\photo\image">
+<meta property="og:description" content="A.Good Pairs 题意   image-20220413112459295  题解 要求数轴上\(a_k\)在\(a_i, a_j\)之间， 求最大最小数 B. 题意   image-20220413113036997  题解 假设有三个数\(a_i,a_j,a_k\)，先删除\(a_i\)，再删除\(a_j\)的结果就是\(a_k-a_i-(a_j-a_i)">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="d:/My%20blog/source_posts/photo/image-20220413112459295.png">
+<meta property="og:image" content="d:/My%20blog/source_posts/photo/image-20220413113036997.png">
+<meta property="og:image" content="d:/My%20blog/source_posts/photo/image-20220413120251015.png">
 <meta property="article:published_time" content="2022-04-13T03:22:46.000Z">
 <meta property="article:modified_time" content="2022-04-13T07:17:44.625Z">
 <meta property="article:author" content="jangyie">
-<meta property="article:tag" content="数论">
 <meta property="article:tag" content="构造">
+<meta property="article:tag" content="数论">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:/My%20blog/source_posts/photo/image-20220413112459295.png">
 
 <link rel="canonical" href="https://spzbyang.github.io/2022/04/13/CodeTON-Round-1-Div-1-Div-2-Rated-Prizes/">
 
@@ -78,7 +82,11 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -229,27 +237,65 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="A-Good-Pairs"><a href="#A-Good-Pairs" class="headerlink" title="A.Good Pairs"></a>A.Good Pairs</h3><h5 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h5><p>![image-20220413112459295](D:\My blog\source_posts\photo\image-20220413112459295.png)</p>
-<h5 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h5><p>要求数轴上$a_k$在$a_i, a_j$之间， 求最大最小数</p>
-<h3 id="B"><a href="#B" class="headerlink" title="B."></a>B.</h3><h5 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h5><p>![image-20220413113036997](D:\My blog\source_posts\photo\image-20220413113036997.png)</p>
-<h5 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h5><p>假设有三个数$a_i,a_j,a_k$，先删除$a_i$，再删除$a_j$的结果就是$a_k-a_i-(a_j-a_i) = a_k-a_j$</p>
+        <h3 id="a.good-pairs">A.Good Pairs</h3>
+<h5 id="题意">题意</h5>
+<figure>
+<img src="D:\My%20blog\source_posts\photo\image-20220413112459295.png"
+alt="image-20220413112459295" />
+<figcaption aria-hidden="true">image-20220413112459295</figcaption>
+</figure>
+<h5 id="题解">题解</h5>
+<p>要求数轴上<span class="math inline">\(a_k\)</span>在<span
+class="math inline">\(a_i, a_j\)</span>之间， 求最大最小数</p>
+<h3 id="b.">B.</h3>
+<h5 id="题意-1">题意</h5>
+<figure>
+<img src="D:\My%20blog\source_posts\photo\image-20220413113036997.png"
+alt="image-20220413113036997" />
+<figcaption aria-hidden="true">image-20220413113036997</figcaption>
+</figure>
+<h5 id="题解-1">题解</h5>
+<p>假设有三个数<span
+class="math inline">\(a_i,a_j,a_k\)</span>，先删除<span
+class="math inline">\(a_i\)</span>，再删除<span
+class="math inline">\(a_j\)</span>的结果就是<span
+class="math inline">\(a_k-a_i-(a_j-a_i) = a_k-a_j\)</span></p>
 <p>因此只要找是否有两个数的差等于k</p>
-<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; mp;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	mp.<span class="built_in">clear</span>();</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;K);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (mp.<span class="built_in">count</span>(a[i]+K) || mp.<span class="built_in">count</span>(a[i]-K)) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		mp.<span class="built_in">insert</span>(a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="C"><a href="#C" class="headerlink" title="C."></a>C.</h3><h5 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h5><p>![image-20220413120251015](D:\My blog\source_posts\photo\image-20220413120251015.png)</p>
-<h5 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h5><p>一开始就有一个想法，如果所有数都大于2，那么只要从大到小依次模成0就可以了，所以考虑特殊的数0,1</p>
+<h5 id="代码">代码</h5>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; mp;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	mp.<span class="built_in">clear</span>();</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;K);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (mp.<span class="built_in">count</span>(a[i]+K) || mp.<span class="built_in">count</span>(a[i]-K)) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		mp.<span class="built_in">insert</span>(a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="c.">C.</h3>
+<h5 id="题意-2">题意</h5>
+<figure>
+<img src="D:\My%20blog\source_posts\photo\image-20220413120251015.png"
+alt="image-20220413120251015" />
+<figcaption aria-hidden="true">image-20220413120251015</figcaption>
+</figure>
+<h5 id="题解-2">题解</h5>
+<p>一开始就有一个想法，如果所有数都大于2，那么只要从大到小依次模成0就可以了，所以考虑特殊的数0,1</p>
 <p>如果0和1同时存在，显然不行。</p>
 <p>如果没有1，那么可以全部变成0</p>
-<p>最后考虑有1无0的情况，那么需要将所有数模成1。对于一个数$a_i$，只有$a_i\ Mod\ a_i-1或a_i-1的因数$结果会是1，但是如果$a_i-1$存在，那么一定会将他变成0，因此需要判断是否有两个数相邻</p>
-<h5 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">sort</span>(a+<span class="number">1</span>, a+n+<span class="number">1</span>);</span><br><span class="line">	n = <span class="built_in">unique</span>(a+<span class="number">1</span>, a+n+<span class="number">1</span>)-a<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">if</span> (a[<span class="number">1</span>] == <span class="number">0</span> &amp;&amp; a[<span class="number">2</span>] == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//a[2]可能会越界，所以特判n=1</span></span><br><span class="line">	<span class="keyword">if</span> (a[<span class="number">1</span>] == <span class="number">0</span> || a[<span class="number">1</span>] &gt;= <span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) <span class="keyword">if</span> (a[i]+<span class="number">1</span> == a[i+<span class="number">1</span>]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="D"><a href="#D" class="headerlink" title="D."></a>D.</h3><h5 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h5><h5 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h5><p>由于 $n\ Mod\ k$ 有 k 个不同的余数 $ 0,1,2…k-1$ ，可以看出 $n = \frac{k(k-1)}{2}+xk ,x\in\mathbb{N} $</p>
-<p>变化后 $2n = k(k-1+2x)$，</p>
-<h5 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h5><h3 id="E"><a href="#E" class="headerlink" title="E."></a>E.</h3><h5 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h5><h5 id="题解-4"><a href="#题解-4" class="headerlink" title="题解"></a>题解</h5><h5 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h5><h3 id="F"><a href="#F" class="headerlink" title="F."></a>F.</h3><h5 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h5><h5 id="题解-5"><a href="#题解-5" class="headerlink" title="题解"></a>题解</h5><h5 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h5>
+<p>最后考虑有1无0的情况，那么需要将所有数模成1。对于一个数<span
+class="math inline">\(a_i\)</span>，只有<span class="math inline">\(a_i\
+Mod\ a_i-1或a_i-1的因数\)</span>结果会是1，但是如果<span
+class="math inline">\(a_i-1\)</span>存在，那么一定会将他变成0，因此需要判断是否有两个数相邻</p>
+<h5 id="代码-1">代码</h5>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">sort</span>(a+<span class="number">1</span>, a+n+<span class="number">1</span>);</span><br><span class="line">	n = <span class="built_in">unique</span>(a+<span class="number">1</span>, a+n+<span class="number">1</span>)-a<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">if</span> (a[<span class="number">1</span>] == <span class="number">0</span> &amp;&amp; a[<span class="number">2</span>] == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//a[2]可能会越界，所以特判n=1</span></span><br><span class="line">	<span class="keyword">if</span> (a[<span class="number">1</span>] == <span class="number">0</span> || a[<span class="number">1</span>] &gt;= <span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) <span class="keyword">if</span> (a[i]+<span class="number">1</span> == a[i+<span class="number">1</span>]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="d.">D.</h3>
+<h5 id="题意-3">题意</h5>
+<h5 id="题解-3">题解</h5>
+<p>由于 <span class="math inline">\(n\ Mod\ k\)</span> 有 k 个不同的余数
+$ 0,1,2…k-1$ ，可以看出 $n = +xk ,x $</p>
+<p>变化后 <span class="math inline">\(2n = k(k-1+2x)\)</span>，</p>
+<h5 id="代码-2">代码</h5>
+<h3 id="e.">E.</h3>
+<h5 id="题意-4">题意</h5>
+<h5 id="题解-4">题解</h5>
+<h5 id="代码-3">代码</h5>
+<h3 id="f.">F.</h3>
+<h5 id="题意-5">题意</h5>
+<h5 id="题解-5">题解</h5>
+<h5 id="代码-4">代码</h5>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     
@@ -258,8 +304,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag"># 数论</a>
               <a href="/tags/%E6%9E%84%E9%80%A0/" rel="tag"># 构造</a>
+              <a href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag"># 数论</a>
           </div>
 
         
@@ -333,7 +379,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Good-Pairs"><span class="nav-number">1.</span> <span class="nav-text">A.Good Pairs</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">1.0.2.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B"><span class="nav-number">2.</span> <span class="nav-text">B.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="nav-number">2.0.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">2.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C"><span class="nav-number">3.</span> <span class="nav-text">C.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-2"><span class="nav-number">3.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="nav-number">3.0.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-number">3.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D"><span class="nav-number">4.</span> <span class="nav-text">D.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-3"><span class="nav-number">4.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="nav-number">4.0.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-number">4.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E"><span class="nav-number">5.</span> <span class="nav-text">E.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-4"><span class="nav-number">5.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-4"><span class="nav-number">5.0.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="nav-number">5.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F"><span class="nav-number">6.</span> <span class="nav-text">F.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-5"><span class="nav-number">6.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-5"><span class="nav-number">6.0.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-4"><span class="nav-number">6.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#a.good-pairs"><span class="nav-number">1.</span> <span class="nav-text">A.Good Pairs</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">1.0.2.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b."><span class="nav-number">2.</span> <span class="nav-text">B.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="nav-number">2.0.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">2.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c."><span class="nav-number">3.</span> <span class="nav-text">C.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-2"><span class="nav-number">3.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="nav-number">3.0.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-number">3.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d."><span class="nav-number">4.</span> <span class="nav-text">D.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-3"><span class="nav-number">4.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="nav-number">4.0.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-number">4.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e."><span class="nav-number">5.</span> <span class="nav-text">E.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-4"><span class="nav-number">5.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-4"><span class="nav-number">5.0.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="nav-number">5.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#f."><span class="nav-number">6.</span> <span class="nav-text">F.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-5"><span class="nav-number">6.0.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-5"><span class="nav-number">6.0.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-4"><span class="nav-number">6.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -347,20 +393,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -443,6 +489,8 @@
 
 
 
+
+  
 
   
 

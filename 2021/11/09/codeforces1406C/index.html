@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"spzbyang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="题意  给定一棵节点数为 $n$的树 ， 删一条边然后加上一条边 ， 使得该树的重心唯一 。（删掉的边和加上的边可以是同一条）  由重心的性质可知，一棵树最多只有两个重心，而“在一棵树上添加或删除一个叶子，那么它的重心最多只移动一条边的距离。” 我们只需将一个重心子树中的一个叶节点连到另一个重心上即可 12345678910111213141516171819202122232425262728">
+  <meta name="description" content="题意  给定一棵节点数为 \(n\)的树 ， 删一条边然后加上一条边 ， 使得该树的重心唯一 。（删掉的边和加上的边可以是同一条）  由重心的性质可知，一棵树最多只有两个重心，而“在一棵树上添加或删除一个叶子，那么它的重心最多只移动一条边的距离。” 我们只需将一个重心子树中的一个叶节点连到另一个重心上即可 1234567891011121314151617181920212">
 <meta property="og:type" content="article">
 <meta property="og:title" content="codeforces1406C">
 <meta property="og:url" content="https://spzbyang.github.io/2021/11/09/codeforces1406C/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="题意  给定一棵节点数为 $n$的树 ， 删一条边然后加上一条边 ， 使得该树的重心唯一 。（删掉的边和加上的边可以是同一条）  由重心的性质可知，一棵树最多只有两个重心，而“在一棵树上添加或删除一个叶子，那么它的重心最多只移动一条边的距离。” 我们只需将一个重心子树中的一个叶节点连到另一个重心上即可 12345678910111213141516171819202122232425262728">
+<meta property="og:description" content="题意  给定一棵节点数为 \(n\)的树 ， 删一条边然后加上一条边 ， 使得该树的重心唯一 。（删掉的边和加上的边可以是同一条）  由重心的性质可知，一棵树最多只有两个重心，而“在一棵树上添加或删除一个叶子，那么它的重心最多只移动一条边的距离。” 我们只需将一个重心子树中的一个叶节点连到另一个重心上即可 1234567891011121314151617181920212">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-11-09T00:26:36.000Z">
 <meta property="article:modified_time" content="2022-03-31T12:22:54.677Z">
@@ -77,7 +77,11 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -234,15 +238,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <hr>
-<h2>题意</h2>
-
-<p>给定一棵节点数为 $n$的树 ， 删一条边然后加上一条边 ， 使得该树的重心唯一 。（删掉的边和加上的边可以是同一条）</p>
-<hr>
-<p>由重心的性质可知，一棵树最多只有两个重心，而“在一棵树上添加或删除一个叶子，那么它的重心最多只移动一条边的距离。” 我们只需将一个重心子树中的一个叶节点连到另一个重心上即可</p>
+        <hr />
+<h2>
+题意
+</h2>
+<p>给定一棵节点数为 <span class="math inline">\(n\)</span>的树 ，
+删一条边然后加上一条边 ， 使得该树的重心唯一
+。（删掉的边和加上的边可以是同一条）</p>
+<hr />
+<p>由重心的性质可知，一棵树最多只有两个重心，而“在一棵树上添加或删除一个叶子，那么它的重心最多只移动一条边的距离。”
+我们只需将一个重心子树中的一个叶节点连到另一个重心上即可</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2e5</span>+<span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dd c=getchar()</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123; <span class="keyword">int</span> s=<span class="number">0</span>,w=<span class="number">1</span>;<span class="keyword">char</span> c;<span class="keyword">while</span>(dd, c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>) <span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)w=<span class="number">-1</span>; <span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>) s=s*<span class="number">10</span>+c-<span class="string">&#x27;0&#x27;</span>,dd;<span class="keyword">return</span> w*s;&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">undef</span> dd</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T, n, m, cnt, ct;</span><br><span class="line"><span class="keyword">int</span> head[N], fa[N], siz[N],centroid[<span class="number">2</span>], ru[N];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> t, nxt;</span><br><span class="line">&#125;e[N&lt;&lt;<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">	e[++cnt].t = v; e[cnt].nxt = head[u]; head[u]=cnt; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs1</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> f)</span> </span>&#123;</span><br><span class="line">	siz[x] = <span class="number">1</span>; fa[x] = f;</span><br><span class="line">	<span class="keyword">int</span> flg = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].nxt) &#123;</span><br><span class="line">		<span class="keyword">int</span> t =  e[i].t;</span><br><span class="line">		<span class="keyword">if</span> (t == f) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="built_in">dfs1</span>(t, x);</span><br><span class="line">		<span class="keyword">if</span> (siz[t] &gt; n/<span class="number">2</span>) flg = <span class="number">0</span>;</span><br><span class="line">		siz[x] += siz[t]; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (n-siz[x] &gt; n/<span class="number">2</span>) flg = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (flg) centroid[ct++] = x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs2</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> f)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (ru[x] == <span class="number">1</span>) <span class="keyword">return</span> x;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[x]; i; i = e[i].nxt) &#123;</span><br><span class="line">		<span class="keyword">int</span> t = e[i].t;</span><br><span class="line">		<span class="keyword">if</span> (t == f) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">dfs2</span>(t, x);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	cnt = ct = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) head[i] = fa[i] = siz[i] = ru[i] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, u, v; i &lt; n; i++) &#123;</span><br><span class="line">		u = <span class="built_in">read</span>(); v = <span class="built_in">read</span>();</span><br><span class="line">		<span class="built_in">add</span>(u, v); <span class="built_in">add</span>(v, u);</span><br><span class="line">		ru[u]++; ru[v]++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">dfs1</span>(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="keyword">if</span> (ct == <span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">&quot;%d %d\n%d %d\n&quot;</span>, <span class="number">1</span>, e[head[<span class="number">1</span>]].t, <span class="number">1</span>, e[head[<span class="number">1</span>]].t);</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="keyword">if</span> (ru[i] == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> t = <span class="built_in">dfs2</span>(centroid[<span class="number">0</span>], centroid[<span class="number">1</span>]);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, t, e[head[t]].t);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, t, centroid[<span class="number">1</span>]);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">init</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">//	freopen(&quot;1.in&quot;, &quot;r&quot;, stdin); </span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;T);</span><br><span class="line">	<span class="keyword">while</span> (T--) <span class="built_in">solve</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     
@@ -264,8 +271,8 @@
       <i class="fa fa-chevron-left"></i> codeforces593D
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/11/09/codeforces911F-Tree-Destruction/" rel="next" title="codeforces911F Tree Destruction">
-      codeforces911F Tree Destruction <i class="fa fa-chevron-right"></i>
+    <a href="/2021/11/09/codeforces337D-Book-of-Evil/" rel="next" title="codeforces337D Book of Evil">
+      codeforces337D Book of Evil <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -325,7 +332,9 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">
+题意
+</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -339,20 +348,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -435,6 +444,8 @@
 
 
 
+
+  
 
   
 

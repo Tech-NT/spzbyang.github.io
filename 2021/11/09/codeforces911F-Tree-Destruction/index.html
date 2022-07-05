@@ -20,20 +20,21 @@
     var CONFIG = {"hostname":"spzbyang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="![image-20211109090732900](D:\My blog\source_posts\photo\image-20211109090732900.png)  先找出直径，不在直径上的点的贡献即到直径两端的远的那个的距离 证明：   假设st为直径。 若距离u最远的点为v，那么可知$dis_{o_2v}&gt;dis_{o_2t}$, 那么$dis_{sv}&gt;dis_{vt}$">
+  <meta name="description" content="image-20211109090732900   先找出直径，不在直径上的点的贡献即到直径两端的远的那个的距离 证明：  假设st为直径。 若距离u最远的点为v，那么可知\(dis_{o_2v}&gt;dis_{o_2t}\), 那么\(dis_{sv}&gt;dis_{vt}\) 即st不是直径，产生矛盾 1234567891011121314151617181920">
 <meta property="og:type" content="article">
 <meta property="og:title" content="codeforces911F Tree Destruction">
 <meta property="og:url" content="https://spzbyang.github.io/2021/11/09/codeforces911F-Tree-Destruction/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="![image-20211109090732900](D:\My blog\source_posts\photo\image-20211109090732900.png)  先找出直径，不在直径上的点的贡献即到直径两端的远的那个的距离 证明：   假设st为直径。 若距离u最远的点为v，那么可知$dis_{o_2v}&gt;dis_{o_2t}$, 那么$dis_{sv}&gt;dis_{vt}$">
+<meta property="og:description" content="image-20211109090732900   先找出直径，不在直径上的点的贡献即到直径两端的远的那个的距离 证明：  假设st为直径。 若距离u最远的点为v，那么可知\(dis_{o_2v}&gt;dis_{o_2t}\), 那么\(dis_{sv}&gt;dis_{vt}\) 即st不是直径，产生矛盾 1234567891011121314151617181920">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="d:/My%20blog/source_posts/photo/image-20211109090732900.png">
 <meta property="og:image" content="d:/My%20blog/source/_posts/photo/image-20211109142422747.png">
 <meta property="article:published_time" content="2021-11-09T01:06:23.000Z">
 <meta property="article:modified_time" content="2022-03-31T12:20:33.232Z">
 <meta property="article:author" content="jangyie">
 <meta property="article:tag" content="树的直径">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="d:/My%20blog/source/_posts/photo/image-20211109142422747.png">
+<meta name="twitter:image" content="d:/My%20blog/source_posts/photo/image-20211109090732900.png">
 
 <link rel="canonical" href="https://spzbyang.github.io/2021/11/09/codeforces911F-Tree-Destruction/">
 
@@ -79,7 +80,11 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -236,17 +241,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>![image-20211109090732900](D:\My blog\source_posts\photo\image-20211109090732900.png)</p>
-<hr>
+        <figure>
+<img src="D:\My%20blog\source_posts\photo\image-20211109090732900.png"
+alt="image-20211109090732900" />
+<figcaption aria-hidden="true">image-20211109090732900</figcaption>
+</figure>
+<hr />
 <p>先找出直径，不在直径上的点的贡献即到直径两端的远的那个的距离</p>
 <p>证明：</p>
-<img src="D:\My blog\source\_posts\photo\image-20211109142422747.png" alt="image-20211109142422747" style="zoom:67%;" />
-
+<p><img src="D:\My blog\source\_posts\photo\image-20211109142422747.png" alt="image-20211109142422747" style="zoom:67%;" /></p>
 <p>假设st为直径。</p>
-<p>若距离u最远的点为v，那么可知$dis_{o_2v}&gt;dis_{o_2t}$, 那么$dis_{sv}&gt;dis_{vt}$ 即st不是直径，产生矛盾</p>
+<p>若距离u最远的点为v，那么可知<span
+class="math inline">\(dis_{o_2v}&gt;dis_{o_2t}\)</span>, 那么<span
+class="math inline">\(dis_{sv}&gt;dis_{vt}\)</span>
+即st不是直径，产生矛盾</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">3e5</span>+<span class="number">7</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dd c = getchar()</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;<span class="keyword">int</span> s=<span class="number">0</span>, w=<span class="number">1</span>; <span class="keyword">char</span> c; <span class="keyword">while</span> (dd, c&gt;<span class="string">&#x27;9&#x27;</span> || c&lt;<span class="string">&#x27;0&#x27;</span>) <span class="keyword">if</span> (c==<span class="string">&#x27;-&#x27;</span>) w=<span class="number">-1</span>; <span class="keyword">while</span> (c&gt;=<span class="string">&#x27;0&#x27;</span> &amp;&amp; c&lt;=<span class="string">&#x27;9&#x27;</span>) s=s*<span class="number">10</span>+c-<span class="string">&#x27;0&#x27;</span>, dd; <span class="keyword">return</span> s*w;&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">undef</span> dd</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, cnt, ct, S, T;</span><br><span class="line"><span class="keyword">int</span> head[N], dis[<span class="number">3</span>][N], ru[N], Ans[N][<span class="number">3</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> ans;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> t, nxt;</span><br><span class="line">&#125;e[N&lt;&lt;<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">queue&lt;<span class="keyword">int</span>&gt;q;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">	e[++cnt].t = v; e[cnt].nxt = head[u]; head[u]=cnt; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> dis[])</span> </span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(dis, <span class="number">0</span>, <span class="keyword">sizeof</span> dis);</span><br><span class="line">	dis[s] = <span class="number">1</span>; q.<span class="built_in">push</span>(s);</span><br><span class="line">	<span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">		<span class="keyword">int</span> u = q.<span class="built_in">front</span>(); q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].nxt) &#123;</span><br><span class="line">			<span class="keyword">int</span> t = e[i].t;</span><br><span class="line">			<span class="keyword">if</span> (dis[t]) <span class="keyword">continue</span>;</span><br><span class="line">			dis[t] = dis[u]+<span class="number">1</span>;</span><br><span class="line">			q.<span class="built_in">push</span>(t);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mx = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		dis[i]--;</span><br><span class="line">		<span class="keyword">if</span> (dis[i] &gt; dis[mx]) mx = i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> mx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span> </span>&#123;</span><br><span class="line">	Ans[++ct][<span class="number">0</span>]=u, Ans[ct][<span class="number">1</span>]=T, Ans[ct][<span class="number">2</span>]=u;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].nxt) &#123;</span><br><span class="line">		<span class="keyword">int</span> t = e[i].t;</span><br><span class="line">		<span class="keyword">if</span> (ru[t] == <span class="number">2</span> &amp;&amp; t != fa) <span class="built_in">dfs</span>(t, u);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	n = <span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, u, v; i &lt; n; i++) &#123;</span><br><span class="line">		u = <span class="built_in">read</span>(); v = <span class="built_in">read</span>();</span><br><span class="line">		<span class="built_in">add</span>(u, v); <span class="built_in">add</span>(v, u);</span><br><span class="line">		ru[u]++; ru[v]++;</span><br><span class="line">	&#125;</span><br><span class="line">	S = <span class="built_in">bfs</span>(<span class="number">1</span>, dis[<span class="number">0</span>]);</span><br><span class="line">	T = <span class="built_in">bfs</span>(S, dis[<span class="number">1</span>]);</span><br><span class="line">	<span class="built_in">bfs</span>(T, dis[<span class="number">2</span>]);</span><br><span class="line"><span class="comment">//	printf(&quot;S = %d T = %d\n&quot;, S, T );</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="keyword">if</span> (ru[i] == <span class="number">1</span> &amp;&amp; i != S &amp;&amp; i != T) q.<span class="built_in">push</span>(i);</span><br><span class="line"><span class="comment">//	printf(&quot;ans = %d\n&quot;, q.front() );</span></span><br><span class="line">	<span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">		<span class="keyword">int</span> u = q.<span class="built_in">front</span>(); q.<span class="built_in">pop</span>();</span><br><span class="line">		ans+=<span class="built_in">max</span>(dis[<span class="number">1</span>][u], dis[<span class="number">2</span>][u]);</span><br><span class="line">		<span class="keyword">if</span> (dis[<span class="number">1</span>][u] &gt; dis[<span class="number">2</span>][u]) Ans[++ct][<span class="number">0</span>]=u, Ans[ct][<span class="number">1</span>]=S, Ans[ct][<span class="number">2</span>]=u;</span><br><span class="line">		<span class="keyword">else</span> Ans[++ct][<span class="number">0</span>]=u, Ans[ct][<span class="number">1</span>]=T, Ans[ct][<span class="number">2</span>]=u;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].nxt) &#123;</span><br><span class="line">			<span class="keyword">int</span> t = e[i].t;</span><br><span class="line">			ru[t]--;</span><br><span class="line">			<span class="keyword">if</span> (ru[t] == <span class="number">1</span>) q.<span class="built_in">push</span>(t);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">dfs</span>(S, <span class="number">0</span>);</span><br><span class="line">	ans+=<span class="number">1ll</span>*(<span class="number">1</span>+dis[<span class="number">1</span>][T])*dis[<span class="number">1</span>][T]/<span class="number">2</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, ans);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= ct; i++) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>, Ans[i][<span class="number">0</span>], Ans[i][<span class="number">1</span>], Ans[i][<span class="number">2</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     
@@ -264,12 +274,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/11/09/codeforces1406C/" rel="prev" title="codeforces1406C">
-      <i class="fa fa-chevron-left"></i> codeforces1406C
+    <a href="/2021/11/09/codeforces337D-Book-of-Evil/" rel="prev" title="codeforces337D Book of Evil">
+      <i class="fa fa-chevron-left"></i> codeforces337D Book of Evil
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/11/24/2021-11-21CCPC%E5%A8%81%E6%B5%B7/" rel="next" title="2021.11.21CCPC威海">
-      2021.11.21CCPC威海 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/11/09/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/printf/" rel="next" title="printf">
+      printf <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -342,20 +352,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -438,6 +448,8 @@
 
 
 
+
+  
 
   
 
