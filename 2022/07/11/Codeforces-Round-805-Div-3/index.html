@@ -20,20 +20,24 @@
     var CONFIG = {"hostname":"spzbyang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="printf(“ldjfal””@”);输出ldjfal@; pinrtf(“%%”);输出% 转自c++库函数] printf函数使用方法 2 参数sort函数的模板有两个参数： printf(“&lt;式样化字符串&gt;”，&lt;参数表&gt;)；">
+  <meta name="description" content="A.Round Down the Price 找一个不大于x的10k10^k10k，两者相减  B.Polycarp Writes a String from Memory 模拟题意  C.Train and Queries">
 <meta property="og:type" content="article">
-<meta property="og:title" content="printf">
-<meta property="og:url" content="https://spzbyang.github.io/2021/11/09/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/printf/index.html">
+<meta property="og:title" content="Codeforces Round#805 (Div. 3)">
+<meta property="og:url" content="https://spzbyang.github.io/2022/07/11/Codeforces-Round-805-Div-3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="printf(“ldjfal””@”);输出ldjfal@; pinrtf(“%%”);输出% 转自c++库函数] printf函数使用方法 2 参数sort函数的模板有两个参数： printf(“&lt;式样化字符串&gt;”，&lt;参数表&gt;)；">
+<meta property="og:description" content="A.Round Down the Price 找一个不大于x的10k10^k10k，两者相减  B.Polycarp Writes a String from Memory 模拟题意  C.Train and Queries">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-11-09T01:34:10.000Z">
-<meta property="article:modified_time" content="2022-07-05T03:38:34.825Z">
+<meta property="og:image" content="https://spzbyang.github.io/2022/07/11/Codeforces-Round-805-Div-3/image-20220711142414132.png">
+<meta property="article:published_time" content="2022-07-11T05:48:24.000Z">
+<meta property="article:modified_time" content="2022-07-11T06:28:24.017Z">
 <meta property="article:author" content="jangyie">
-<meta property="article:tag" content="C++">
+<meta property="article:tag" content="dfs序">
+<meta property="article:tag" content="并查集">
+<meta property="article:tag" content="虚树">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://spzbyang.github.io/2022/07/11/Codeforces-Round-805-Div-3/image-20220711142414132.png">
 
-<link rel="canonical" href="https://spzbyang.github.io/2021/11/09/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/printf/">
+<link rel="canonical" href="https://spzbyang.github.io/2022/07/11/Codeforces-Round-805-Div-3/">
 
 
 <script id="page-configurations">
@@ -46,7 +50,7 @@
   };
 </script>
 
-  <title>printf | Hexo</title>
+  <title>Codeforces Round#805 (Div. 3) | Hexo</title>
   
 
 
@@ -181,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2021/11/09/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/printf/">
+    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/07/11/Codeforces-Round-805-Div-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -194,7 +198,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          printf
+          Codeforces Round#805 (Div. 3)
         </h1>
 
         <div class="post-meta">
@@ -203,23 +207,21 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-11-09 09:34:10" itemprop="dateCreated datePublished" datetime="2021-11-09T09:34:10+08:00">2021-11-09</time>
+              <time title="创建时间：2022-07-11 13:48:24 / 修改时间：14:28:24" itemprop="dateCreated datePublished" datetime="2022-07-11T13:48:24+08:00">2022-07-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-05 11:38:34" itemprop="dateModified" datetime="2022-07-05T11:38:34+08:00">2022-07-05</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/CF/" itemprop="url" rel="index"><span itemprop="name">CF</span></a>
                 </span>
             </span>
 
@@ -234,14 +236,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>printf(“ldjfal””@”);<br>输出ldjfal@;</p>
-<p>pinrtf(“%%”);<br>输出%</p>
-<p>转自<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_48809769/article/details/108219550">c++库函数] printf函数使用方法</a></p>
-<p>2 参数<br>sort函数的模板有两个参数：</p>
-<p>printf(“&lt;式样化字符串&gt;”，&lt;参数表&gt;)；</p>
-<p>3 式样化字符串<br>[1] 转换说明符<br>%a 浮点数、十六进制bai数字和p-记法（C99）<br>%c 一个字符<br>%d 有符号十进制整数<br>%e 浮点数、e-记数法<br>%f 浮点数、十进制记数法<br>%g 根据数值不同自动选择％f或％e．<br>%i 有符号十进制数（与％d相同）<br>%o 无符号八进制整数<br>%p 指针<br>%s 字符串<br>%u 无符号十进制整数<br>%x 使用十六进制数字0f的无符号十六进制整数<br>%% 打印一个百分号</p>
-<p>[2]标志<br>左对齐：”-“ e.g. “%-20s”<br>右对齐：”+” e.g. “%+20s”<br>空格：若符号为正，则显示空格，负则显示”-“ e.g. “% “<br>#：对c,s,d,u类无影响；对o类，在输出时加前缀o；对x类，在输出时加前缀0x；<br>对e,g,f 类当结果有小数时才给出小数点。</p>
-<p>[3]格式字符串（格式）<br>［标志］［输出最少宽度］［．精度］［长度］类型<br>“％-md” ：左对齐，若m比实际少时，按实际输出。<br>“%m.ns”：输出m位，取字符串(左起)n位，左补空格，当n&gt;m or m省略时m&#x3D;n<br>e.g. “%7.2s” 输入CHINA<br>　 输出” CH”<br>“%m.nf”：输出浮点数，m为宽度，n为小数点右边数位<br>e.g. “%” 输入3852.99<br>输出3853.0<br>长度：为ｈ短整形量,ｌ为长整形量</p>
+        <h3 id="around-down-the-price"><a class="markdownIt-Anchor" href="#around-down-the-price"></a> A.Round Down the Price</h3>
+<p>找一个不大于x的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">10^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span>，两者相减</p>
+<h3 id="bpolycarp-writes-a-string-from-memory"><a class="markdownIt-Anchor" href="#bpolycarp-writes-a-string-from-memory"></a> B.Polycarp Writes a String from Memory</h3>
+<p>模拟题意</p>
+<h3 id="ctrain-and-queries"><a class="markdownIt-Anchor" href="#ctrain-and-queries"></a> C.Train and Queries</h3>
+<p>用map记录每个站点最左和最右分别出现在mi[i],mx[i]</p>
+<p>若mx[b]&gt;= mi[a]即可</p>
+<h3 id="dnot-a-cheap-string"><a class="markdownIt-Anchor" href="#dnot-a-cheap-string"></a> D.Not a Cheap String</h3>
+<p>从z开始删</p>
+<h3 id="esplit-into-two-sets"><a class="markdownIt-Anchor" href="#esplit-into-two-sets"></a> E.Split Into Two Sets</h3>
+<p>tips：要判断数据是否合法，比赛时wa了几发<br>
+把多米诺骨牌当边，查询是否有奇环即可</p>
+<p>队友有个比较有意思的思路判环：</p>
+<p>由于每个点度为2，最后的只会出现各个独立的环，用并查集记录每个联通块的点数即可</p>
+<h3 id="fequate-multisets"><a class="markdownIt-Anchor" href="#fequate-multisets"></a> F.Equate Multisets</h3>
+<p>队友的思路：</p>
+<p>把题意稍改一下，A里的数若能整除2则可除2，B中的数可以直接除2，问能否使AB相同。</p>
+<p>如果A中最大的那个数比B中最大还大，那么看他能否除2，不能的话就不可能了。如果B中最大比A大，那么直接除2。用优先队列（大根堆）来维护</p>
+<h3 id="gpassable-paths"><a class="markdownIt-Anchor" href="#gpassable-paths"></a> G.Passable Paths</h3>
+<p>题意：每次给定树上的K个节点，询问这些节点是否在一条路径上。</p>
+<p>第一眼是虚树，不过要简单许多。我们先对K个节点按dfs序排序，然后对相邻的点求LCA。那么只会出现两种情况：</p>
+<img src="/2022/07/11/Codeforces-Round-805-Div-3/image-20220711142414132.png" class title="image-20220711142414132">
+<p>要么LCA是两个点其中之一，要么LCA的深度小于等于其他所有节点，且只可能出现一次这种情况。出现其他情况就是NO了</p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
@@ -251,7 +268,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/dfs%E5%BA%8F/" rel="tag"># dfs序</a>
+              <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" rel="tag"># 并查集</a>
+              <a href="/tags/%E8%99%9A%E6%A0%91/" rel="tag"># 虚树</a>
           </div>
 
         
@@ -260,13 +279,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/10/31/My-First-Blog/" rel="prev" title="my first blog">
-      <i class="fa fa-chevron-left"></i> my first blog
+    <a href="/2022/07/07/Codeforces-Round-226-Div-2/" rel="prev" title="Codeforces Round#226 (Div. 2)">
+      <i class="fa fa-chevron-left"></i> Codeforces Round#226 (Div. 2)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/07/05/hexo-blog-%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E7%BE%8E%E5%8C%96/" rel="next" title="hexo blog 的搭建与美化">
-      hexo blog 的搭建与美化 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -325,6 +341,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#around-down-the-price"><span class="nav-number">1.</span> <span class="nav-text"> A.Round Down the Price</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bpolycarp-writes-a-string-from-memory"><span class="nav-number">2.</span> <span class="nav-text"> B.Polycarp Writes a String from Memory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ctrain-and-queries"><span class="nav-number">3.</span> <span class="nav-text"> C.Train and Queries</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dnot-a-cheap-string"><span class="nav-number">4.</span> <span class="nav-text"> D.Not a Cheap String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#esplit-into-two-sets"><span class="nav-number">5.</span> <span class="nav-text"> E.Split Into Two Sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fequate-multisets"><span class="nav-number">6.</span> <span class="nav-text"> F.Equate Multisets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gpassable-paths"><span class="nav-number">7.</span> <span class="nav-text"> G.Passable Paths</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -338,20 +355,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
