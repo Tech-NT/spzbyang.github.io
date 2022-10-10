@@ -304,7 +304,7 @@ dy_i = dy_{i-1}+x_{i-1}+y_{i-1}+(i-1)+2\\
       </tags>
   </entry>
   <entry>
-    <title>Codeforces Round \#821 (Div. 2)</title>
+    <title>Codeforces Round 821 (Div. 2)</title>
     <url>/2022/09/20/Codeforces-Round-821-Div-2/</url>
     <content><![CDATA[<h2 id="d1-zero-one-easy-version"><a class="markdownIt-Anchor" href="#d1-zero-one-easy-version"></a> <a href="https://codeforc.es/contest/1733/problem/D1">D1 - Zero-One (Easy Version)</a></h2>
 <p>首先如果不同的位数为奇数个，显然不行，因为一次必须改变两个位置。</p>
