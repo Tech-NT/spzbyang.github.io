@@ -175,7 +175,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/10/03/2022%E7%89%9B%E5%AE%A2%E5%9B%BD%E5%BA%86%E9%9B%86%E8%AE%AD%E6%B4%BE%E5%AF%B9day3/">
+    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/11/01/%E6%9C%80%E9%95%BFk%E5%8F%AF%E9%87%8D%E5%8C%BA%E9%97%B4%E9%9B%86%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -189,7 +189,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/10/03/2022%E7%89%9B%E5%AE%A2%E5%9B%BD%E5%BA%86%E9%9B%86%E8%AE%AD%E6%B4%BE%E5%AF%B9day3/" class="post-title-link" itemprop="url">2022牛客国庆集训派对day3 ABCEF</a>
+            <a href="/2022/11/01/%E6%9C%80%E9%95%BFk%E5%8F%AF%E9%87%8D%E5%8C%BA%E9%97%B4%E9%9B%86%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">最长k可重区间集问题</a>
         </h2>
 
         <div class="post-meta">
@@ -198,27 +198,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-10-03 19:13:25" itemprop="dateCreated datePublished" datetime="2022-10-03T19:13:25+08:00">2022-10-03</time>
+              <time title="创建时间：2022-11-01 16:17:03 / 修改时间：16:50:25" itemprop="dateCreated datePublished" datetime="2022-11-01T16:17:03+08:00">2022-11-01</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-04 00:45:12" itemprop="dateModified" datetime="2022-10-04T00:45:12+08:00">2022-10-04</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%AF%94%E8%B5%9B/" itemprop="url" rel="index"><span itemprop="name">比赛</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%AF%94%E8%B5%9B/%E7%89%9B%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">牛客</span></a>
+                  <a href="/categories/ACM/" itemprop="url" rel="index"><span itemprop="name">ACM</span></a>
                 </span>
             </span>
 
@@ -233,14 +223,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>前言：感觉19年的牛客多校真好啊，做起来真的很清水，补起来也舒服，比22年的舒服好多。</p>
-<p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/41757">2022牛客国庆集训派对day3</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.nowcoder.net/n/7a47aceb1e48478097764e694bd0c0a2">【题解】2019牛客暑期多校训练-第五场_牛客博客 (nowcoder.net)</a></p>
-<h2 id="adigits-2"><a class="markdownIt-Anchor" href="#adigits-2"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/41757/A">A.digits 2</a></h2>
-<p>输出n个n即可。</p>
+          <p><strong>题目链接</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3358">P3358 最长k可重区间集问题 </a></p>
+<p><strong>题解</strong></p>
+<p>这道题可以换一种说法：进行K次操作，每次可以选出若干个互不相交的区间（由于是开区间，所以端点是可以相同的），且每个区间只能取一次，问最后区间长度和最多是多少</p>
+<p>这样想的话，我们只需要保证每一次增流的时候都不能走回头路，然后最多增<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span></span></span></span>次。那么我们从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span></span></span></span>向<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span>连一条流为1，费用为长度的边，代表一段区间。同时由于区间之间可以不相连，我们将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>向<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">i+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>连边，这边费用为0，流只要比<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span></span></span></span>大就可以了。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/10/03/2022%E7%89%9B%E5%AE%A2%E5%9B%BD%E5%BA%86%E9%9B%86%E8%AE%AD%E6%B4%BE%E5%AF%B9day3/#more" rel="contents">
+              <a class="btn" href="/2022/11/01/%E6%9C%80%E9%95%BFk%E5%8F%AF%E9%87%8D%E5%8C%BA%E9%97%B4%E9%9B%86%E9%97%AE%E9%A2%98/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -264,7 +254,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/09/30/%E7%AC%AC46%E5%B1%8AICPC%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%EF%BC%88%E6%98%86%E6%98%8E%EF%BC%89-%E6%AD%A3%E5%BC%8F%E8%B5%9B%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/10/29/%E5%A4%AA%E7%A9%BA%E9%A3%9E%E8%A1%8C%E8%AE%A1%E5%88%92%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -278,7 +268,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/30/%E7%AC%AC46%E5%B1%8AICPC%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%EF%BC%88%E6%98%86%E6%98%8E%EF%BC%89-%E6%AD%A3%E5%BC%8F%E8%B5%9B%EF%BC%89/" class="post-title-link" itemprop="url">第46届ICPC亚洲区域赛（昆明）(正式赛） ABDEFGK</a>
+            <a href="/2022/10/29/%E5%A4%AA%E7%A9%BA%E9%A3%9E%E8%A1%8C%E8%AE%A1%E5%88%92%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">太空飞行计划问题</a>
         </h2>
 
         <div class="post-meta">
@@ -288,14 +278,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-09-30 10:25:19" itemprop="dateCreated datePublished" datetime="2022-09-30T10:25:19+08:00">2022-09-30</time>
+              <time title="创建时间：2022-10-29 19:22:48" itemprop="dateCreated datePublished" datetime="2022-10-29T19:22:48+08:00">2022-10-29</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-02 11:09:19" itemprop="dateModified" datetime="2022-10-02T11:09:19+08:00">2022-10-02</time>
+                <time title="修改时间：2022-10-31 11:24:24" itemprop="dateModified" datetime="2022-10-31T11:24:24+08:00">2022-10-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -305,9 +295,82 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/ACM/" itemprop="url" rel="index"><span itemprop="name">ACM</span></a>
                 </span>
-                  ，
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>之前在[最大获利]中已经解释过最大权闭合子图的原理了，这里就讲一下如何输出方案</p>
+<p>如果在最后一次增广中，没有增广到的节点就是在方案中的节点。<br>
+如果是仪器，也就是与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span></span></span></span>相连的节点，如果无法增广到这个点，那么就表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span></span></span></span>到这个点的边已经在最大流中了。如果是实验，如果被增广到了，那么说明至少有一个必须的仪器没有在最大流中，同时这就说明在最小割中必须删去这个实验与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span>的边来使<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span></span></span></span>与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span>不连通</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS ios::sync_with_stdio(false)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> dd c=getchar()</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;<span class="keyword">int</span> s=<span class="number">0</span>,w=<span class="number">1</span>; <span class="keyword">char</span> c; <span class="keyword">while</span> (dd, c&gt;<span class="string">&#x27;9&#x27;</span> || c&lt;<span class="string">&#x27;0&#x27;</span>) <span class="keyword">if</span> (c==<span class="string">&#x27;-&#x27;</span>) w=<span class="number">-1</span>; <span class="keyword">while</span> (c&gt;=<span class="string">&#x27;0&#x27;</span> &amp;&amp; c&lt;=<span class="string">&#x27;9&#x27;</span>) s=s*<span class="number">10</span>+c-<span class="string">&#x27;0&#x27;</span>, dd; <span class="keyword">return</span> s*w;&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">undef</span> dd</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">if</span> (x&lt;<span class="number">0</span>)<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>), x=-x;<span class="keyword">if</span> (x&gt;<span class="number">9</span>)<span class="built_in">write</span>(x/<span class="number">10</span>);<span class="built_in">putchar</span>(x%<span class="number">10</span>|<span class="string">&#x27;0&#x27;</span>);&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">wln</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="built_in">write</span>(x);<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);&#125; <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">wsp</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="built_in">write</span>(x); <span class="built_in">putchar</span>(<span class="string">&#x27; &#x27;</span>);&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> For(i,a,b) for(int i = a; i &lt;= b; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Gor(i,a,b) for(int i = a; i &gt;= b; i--)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="function">mt19937_64 <span class="title">rnd</span><span class="params">(chrono::steady_clock::now().time_since_epoch().count())</span></span>; </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mk make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> se second</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">#define ls (ts&lt;&lt;1)</span></span><br><span class="line"><span class="comment">#define rs (ts&lt;&lt;1|1)</span></span><br><span class="line"><span class="comment">#define mid ((l+r)&gt;&gt;1)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">5e5</span>+<span class="number">7</span>, P = <span class="number">998244353</span>, inf = <span class="number">1e9</span>, m0x3f = <span class="number">1061109567</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Add</span><span class="params">(<span class="keyword">int</span> &amp;x, <span class="keyword">int</span> y)</span> </span>&#123;x+=y; <span class="keyword">if</span> (x&gt;=P) x-=P;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> t, nxt, v;</span><br><span class="line">&#125;e[N&lt;&lt;<span class="number">1</span>];</span><br><span class="line"><span class="keyword">int</span> cnt = <span class="number">1</span>, S, T, maxn;</span><br><span class="line"><span class="keyword">int</span> head[N], dep[N], cur[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> t, <span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">    e[++cnt] = &#123;t, head[u], v&#125;; head[u] = cnt;</span><br><span class="line">    e[++cnt] = &#123;u, head[t], <span class="number">0</span>&#125;; head[t] = cnt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">queue&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">bfs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= maxn; i++) cur[i] = head[i];</span><br><span class="line">    cur[S] = head[S];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= maxn; i++) dep[i] = <span class="number">0</span>;</span><br><span class="line">    dep[S] = <span class="number">1</span>; dep[T] = <span class="number">0</span>;</span><br><span class="line">    q.<span class="built_in">push</span>(S);</span><br><span class="line">    <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = q.<span class="built_in">front</span>(); q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].nxt) &#123;</span><br><span class="line">            <span class="keyword">int</span> t = e[i].t;</span><br><span class="line">            <span class="keyword">if</span> (dep[t] || e[i].v == <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">            dep[t] = dep[u]+<span class="number">1</span>;</span><br><span class="line">            q.<span class="built_in">push</span>(t);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!dep[T]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> wi)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (u == T) <span class="keyword">return</span> wi;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> &amp;i = cur[u]; i; i = e[i].nxt) &#123;</span><br><span class="line">        <span class="keyword">int</span> t = e[i].t;</span><br><span class="line">        <span class="keyword">if</span> (dep[t] != dep[u]+<span class="number">1</span> || e[i].v == <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">int</span> k = <span class="built_in">dfs</span>(t, <span class="built_in">min</span>(e[i].v, wi));</span><br><span class="line">        <span class="keyword">if</span> (k &lt;= <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">        e[i].v -= k;</span><br><span class="line">        e[i^<span class="number">1</span>].v += k;</span><br><span class="line">        <span class="keyword">return</span> k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Dinic</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">bfs</span>()) &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">int</span> k = <span class="built_in">dfs</span>(S, <span class="number">1e9</span>)) ans+=k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    m = <span class="built_in">read</span>(); n = <span class="built_in">read</span>();</span><br><span class="line">    S = n+m+<span class="number">1</span>; T = S+<span class="number">1</span>; maxn = T;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, x; i &lt;= m; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;x);</span><br><span class="line">        ans += x;</span><br><span class="line">        <span class="built_in">add</span>(n+i, T, x);</span><br><span class="line">        <span class="keyword">char</span> ch;</span><br><span class="line">        <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d%c&quot;</span>, &amp;x, &amp;ch);</span><br><span class="line">            <span class="built_in">add</span>(x, n+i, inf);</span><br><span class="line">            <span class="keyword">if</span> (ch == <span class="string">&#x27;\n&#x27;</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">add</span>(S, i, <span class="built_in">read</span>());</span><br><span class="line">    ans-=<span class="built_in">Dinic</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n+<span class="number">1</span>; i &lt;= n+m; i++) <span class="keyword">if</span> (!dep[i]) <span class="built_in">wsp</span>(i-n); <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="keyword">if</span> (!dep[i]) <span class="built_in">wsp</span>(i); <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">    <span class="built_in">wln</span>(ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/10/27/NOI2006-%E6%9C%80%E5%A4%A7%E8%8E%B7%E5%88%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="jangyie">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/10/27/NOI2006-%E6%9C%80%E5%A4%A7%E8%8E%B7%E5%88%A9/" class="post-title-link" itemprop="url">NOI2006 最大获利</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-10-27 21:14:42" itemprop="dateCreated datePublished" datetime="2022-10-27T21:14:42+08:00">2022-10-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-10-31 11:24:04" itemprop="dateModified" datetime="2022-10-31T11:24:04+08:00">2022-10-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ACM/ICPC/" itemprop="url" rel="index"><span itemprop="name">ICPC</span></a>
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
                 </span>
             </span>
 
@@ -322,14 +385,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="aamino-acids"><a class="markdownIt-Anchor" href="#aamino-acids"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/32708/A">A.Amino Acids</a></h2>
-<p>模拟题，学生物的看到很亲切。</p>
-<p>题意就是给定若干个氨基酸，要求求出肽链的方案数，满足分子量小于给定的值。</p>
-<p>氨基酸之间以肽键相连，并且会脱去一分子的水。</p>
-<h2 id="bblocks"><a class="markdownIt-Anchor" href="#bblocks"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/32708/B">B.Blocks</a></h2>
+          <h1 id="noi2006-最大获利"><a class="markdownIt-Anchor" href="#noi2006-最大获利"></a> [NOI2006] 最大获利</h1>
+<h2 id="题目描述"><a class="markdownIt-Anchor" href="#题目描述"></a> 题目描述</h2>
+<p>新的技术正冲击着手机通讯市场，对于各大运营商来说，这既是机遇，更是挑战。THU 集团旗下的 CS&amp;T 通讯公司在新一代通讯技术血战的前夜，需要做太多的准备工作，仅就站址选择一项，就需要完成前期市场研究、站址勘测、最优化等项目。</p>
+<p>在前期市场调查和站址勘测之后，公司得到了一共 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span> 个可以作为通讯信号中转站的地址，而由于这些地址的地理位置差异，在不同的地方建造通讯中转站需要投入的成本也是不一样的，所幸在前期调查之后这些都是已知数据：建立第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 个通讯中转站需要的成本为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">P_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">1 \leq i \leq N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.79549em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>）。</p>
+<p>另外公司调查得出了所有期望中的用户群，一共 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span> 个。关于第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 个用户群的信息概括为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">A_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">B_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05017em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">C_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ：这些用户会使用中转站 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">A_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和中转站 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">B_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05017em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 进行通讯，公司可以获益 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>C</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">C_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">1 \leq i \leq M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.79549em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><msub><mi>A</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">1 \leq A_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mi>i</mi></msub><mo>≤</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">B_i \leq N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05017em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>）</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/09/30/%E7%AC%AC46%E5%B1%8AICPC%E4%BA%9A%E6%B4%B2%E5%8C%BA%E5%9F%9F%E8%B5%9B%EF%BC%88%E6%98%86%E6%98%8E%EF%BC%89-%E6%AD%A3%E5%BC%8F%E8%B5%9B%EF%BC%89/#more" rel="contents">
+              <a class="btn" href="/2022/10/27/NOI2006-%E6%9C%80%E5%A4%A7%E8%8E%B7%E5%88%A9/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -353,7 +416,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/09/20/Codeforces-Round-821-Div-2/">
+    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/10/23/ACM/Codeforces-Round-829-Div-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -367,7 +430,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/20/Codeforces-Round-821-Div-2/" class="post-title-link" itemprop="url">Codeforces Round 821 (Div. 2)</a>
+            <a href="/2022/10/23/ACM/Codeforces-Round-829-Div-2/" class="post-title-link" itemprop="url">Codeforces Round 829 (div2)</a>
         </h2>
 
         <div class="post-meta">
@@ -377,28 +440,15 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-09-20 16:01:28" itemprop="dateCreated datePublished" datetime="2022-09-20T16:01:28+08:00">2022-09-20</time>
+              <time title="创建时间：2022-10-23 17:11:34" itemprop="dateCreated datePublished" datetime="2022-10-23T17:11:34+08:00">2022-10-23</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-10 19:21:26" itemprop="dateModified" datetime="2022-10-10T19:21:26+08:00">2022-10-10</time>
+                <time title="修改时间：2022-10-24 01:25:32" itemprop="dateModified" datetime="2022-10-24T01:25:32+08:00">2022-10-24</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/CF/" itemprop="url" rel="index"><span itemprop="name">CF</span></a>
-                </span>
-            </span>
 
           
 
@@ -411,14 +461,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="d1-zero-one-easy-version"><a class="markdownIt-Anchor" href="#d1-zero-one-easy-version"></a> <a target="_blank" rel="noopener" href="https://codeforc.es/contest/1733/problem/D1">D1 - Zero-One (Easy Version)</a></h2>
-<p>首先如果不同的位数为奇数个，显然不行，因为一次必须改变两个位置。</p>
-<p>D1保证了<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>&lt;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">y&lt;x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335400000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>，那么就是尽量不要让操作相邻。如果不同的位置大于2个，可以这样：</p>
-<img src="/2022/09/20/Codeforces-Round-821-Div-2/image-20220920160804322.png" alt="image-20220920160804322" style="zoom: 50%;">
-<p>答案为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>c</mi><mi>n</mi><mi>t</mi></mrow><mn>2</mn></mfrac><mi>y</mi></mrow><annotation encoding="application/x-tex">\frac{cnt}{2}y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.169556em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.824556em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">c</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span></p>
+          <p>上大分，但是小号</p>
+
+<h2 id="cmake-nonzero-sum"><a class="markdownIt-Anchor" href="#cmake-nonzero-sum"></a> <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1754/problem/C2">C.Make Nonzero Sum</a></h2>
+<p>比较水，我们先考虑全部分开的答案为S。</p>
+<p>如果S&gt;0，那么需要一些{x,1}对，x是任意数，如果能找出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>S</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{S}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>个不重的对就可以</p>
+<p>S&lt;0也是同理</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/09/20/Codeforces-Round-821-Div-2/#more" rel="contents">
+              <a class="btn" href="/2022/10/23/ACM/Codeforces-Round-829-Div-2/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -442,7 +493,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/09/13/%E7%99%BD%E5%85%94%E7%9A%84%E6%B8%B8%E6%88%8F/">
+    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/10/22/ACM/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B104/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -456,7 +507,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/13/%E7%99%BD%E5%85%94%E7%9A%84%E6%B8%B8%E6%88%8F/" class="post-title-link" itemprop="url">白兔的游戏</a>
+            <a href="/2022/10/22/ACM/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B104/" class="post-title-link" itemprop="url">牛客练习赛104</a>
         </h2>
 
         <div class="post-meta">
@@ -465,27 +516,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-09-13 20:55:23" itemprop="dateCreated datePublished" datetime="2022-09-13T20:55:23+08:00">2022-09-13</time>
+              <time title="创建时间：2022-10-22 15:14:35 / 修改时间：15:58:43" itemprop="dateCreated datePublished" datetime="2022-10-22T15:14:35+08:00">2022-10-22</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-18 15:51:44" itemprop="dateModified" datetime="2022-09-18T15:51:44+08:00">2022-09-18</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/Wannafly%E6%8C%91%E6%88%98%E8%B5%9B/" itemprop="url" rel="index"><span itemprop="name">Wannafly挑战赛</span></a>
+                  <a href="/categories/%E7%89%9B%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">牛客</span></a>
                 </span>
             </span>
 
@@ -500,103 +541,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="白兔的游戏"><a class="markdownIt-Anchor" href="#白兔的游戏"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/15255">白兔的游戏</a></h2>
-<p>Nim游戏是这样的：有 n 个石子堆，第 i 个石子堆有 a[i] 个石子，两个人轮流选择一个石子堆并从中拿走一个或者多个石子。拿走最后一个石子的人获胜。</p>
-<p>现在有两个人他们决定每次随机选择一个合法决策来操作。现在他们想知道在这种决策方式下先手的胜率以及所有可能的情况中先手获胜的次数，对 998244353 取模。</p>
-<h2 id="题解"><a class="markdownIt-Anchor" href="#题解"></a> 题解</h2>
-<p>第一问，求先手获胜概率。我们可以定义<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">f[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span>表示大小为i的堆先手获胜的概率。</p>
+          <h2 id="d逃亡的贝贝"><a class="markdownIt-Anchor" href="#d逃亡的贝贝"></a> <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/43058/D">D.逃亡的贝贝</a></h2>
+<img src="/2022/10/22/ACM/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B104/image-20221022152240065.png" class title="image-20221022152240065">
+<p>我们先二分答案，那么如何check呢</p>
+<p>如果一条边的权小于mid，那么它的边权就是0，如果一条边经过操作后小于mid，它的边权就是1，经过操作也不能小于mid的边不应加到我们的新图里。</p>
+<p>此时如果S到T的最短路<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&lt;</mo><mo>=</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">&lt;=K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span></span></span></span>那么就是可行的。我是用并查集把0边缩起来，之后跑一遍bfs，看到题解说dij也能过，还可以直接01bfs</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/09/13/%E7%99%BD%E5%85%94%E7%9A%84%E6%B8%B8%E6%88%8F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://spzbyang.github.io/2022/09/03/%E8%94%9A%E6%9D%A5%E6%9D%AF2022%E7%89%9B%E5%AE%A2%E6%9A%91%E6%9C%9F%E5%A4%9A%E6%A0%A1%E8%AE%AD%E7%BB%83%E8%90%A52/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="jangyie">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/09/03/%E8%94%9A%E6%9D%A5%E6%9D%AF2022%E7%89%9B%E5%AE%A2%E6%9A%91%E6%9C%9F%E5%A4%9A%E6%A0%A1%E8%AE%AD%E7%BB%83%E8%90%A52/" class="post-title-link" itemprop="url">蔚来杯2022牛客暑期多校训练营2</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-09-03 15:44:24" itemprop="dateCreated datePublished" datetime="2022-09-03T15:44:24+08:00">2022-09-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-08 15:21:43" itemprop="dateModified" datetime="2022-09-08T15:21:43+08:00">2022-09-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1/" itemprop="url" rel="index"><span itemprop="name">牛客多校</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/33187#question">&quot;蔚来杯&quot;2022牛客暑期多校训练营2</a></p>
-<h2 id="c-link-with-nim-game"><a class="markdownIt-Anchor" href="#c-link-with-nim-game"></a> C-Link with Nim Game</h2>
-<p>首先这是个nim游戏，因此如果所有石堆的异或和为0，则先手必输，否则先手必胜。</p>
-<p>考虑如果必输该如何操作。如果必输，那么异或和为0，必然可以找到一个操作，只取一个石子，且对手必须只取一个石子。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">011100</span><br><span class="line">010100</span><br><span class="line">001000</span><br><span class="line"></span><br><span class="line">你可以从第一或第二堆中取一</span><br><span class="line">使得总异或和变成000111，然后只能操作另一堆</span><br><span class="line"></span><br><span class="line">不能取第三堆中的一，因为后手可以取走第一堆中的1001个石子。</span><br><span class="line"></span><br><span class="line">结论就是取走一堆中的一个石子，假设最低位为j，那么所有这一位为1的堆的最低位也必须为j</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/09/03/%E8%94%9A%E6%9D%A5%E6%9D%AF2022%E7%89%9B%E5%AE%A2%E6%9A%91%E6%9C%9F%E5%A4%9A%E6%A0%A1%E8%AE%AD%E7%BB%83%E8%90%A52/#more" rel="contents">
+              <a class="btn" href="/2022/10/22/ACM/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B104/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -619,7 +571,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -685,20 +637,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">49</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
